@@ -5,7 +5,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Mon blog php</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/startbootstrap-grayscale/dist/assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -18,7 +18,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Mon CV</a>
+                <a class="navbar-brand" href="#page-top">Accueil</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -26,7 +26,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">BlogPost</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#blogPost">BlogPost</a></li>
                         <li class="nav-item"><a class="nav-link" href="#signup">Se connecter</a></li>
                     </ul>
                 </div>
@@ -36,10 +36,6 @@
         <header class="masthead">
             <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
                 <div class="d-flex justify-content-center">
-                    <div class="float-start text-center text-light">
-                        <img src="" alt="Logo/Photo de moi">
-                        <p>Marie EMMA</p>
-                    </div>
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase">Mon blog PHP</h1>
                         <h2 class="text-white-50 mx-auto mt-2 mb-5">Le développement informatique by Marie Emma</h2>
@@ -49,27 +45,73 @@
             </div>
         </header>
         <!-- About-->
-        <section class="about-section text-center" id="about">
+        <section class="about-section" id="about">
             <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2 class="text-white mb-4">Built with Bootstrap 5</h2>
-                        <p class="text-white-50">
-                            Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-                            <a href="https://startbootstrap.com/theme/grayscale/">the preview page.</a>
-                            The theme is open source, and you can use it for any purpose, personal or commercial.
+                <div class="row gx-4 gx-lg-5 justify-content-left">
+                    <div class="col-lg-6 text-light">
+                        <div class="row">
+                            <div class="col-4">
+                                <img class="icone-me" src="/startbootstrap-grayscale/src/assets/img/monImage.jpg" alt="Logo/Photo de moi">
+                                <p>Marie EMMA</p>
+                            </div>
+                            <div class="col-6">
+                                <ul>
+                                    <li>
+                                        <a href="" ><i class="fas fa-file-pdf"></i>&nbsp; Mon CV</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/MarieClaire974"><i class="fab fa-github"></i>&nbsp; Mon GitHub</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.linkedin.com/in/marie-claire-emma"><i class="fab fa-linkedin"></i>&nbsp; Mon LinkedIn</a>
+                                    </li>
+                                    <li>
+                                        <a href=""><i class="fab fa-twitter"></i>&nbsp; Mon Twitter</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h2 class="text-white mb-4">Mieux me connaitre</h2>
+                        <p class="text-white-50 ">
+                            Débutante ayant commencer en autodidacte, je suis actuellement en alternance PHP-Symfony.
+                            <br>
+                            En poste depuis 6 mois en tant que développeuse web chez Défi-Informatique.
                         </p>
                     </div>
+                    <div class="col-md-4 text-white-50">
+                        <form action="#">
+                            <label for="name">
+                                Insérer votre nom:
+                            </label>
+                            <input id="name" type="text" placeholder="ex: EMMA">
+                            <label for="firstName">
+                                Insérer votre prénom
+                            </label>
+                            <input id="firstName" type="text" placeholder="ex:Marie">
+                            <label for="email">
+                                Insérer votre adresse e-mail
+                            </label>
+                            <input type="email" id="email" placeholder="ex: email@email.com">
+                            <label for="message">
+                                Insérer votre message
+                            </label>
+                           <textarea name="message" id="message" cols="50" rows="10" placeholder="Votre message"></textarea>
+                           <div class="row ">
+                               <div class="col text-center">
+                                   <input class="w-50" type="submit" value="Envoyer">
+                               </div>
+                           </div>
+                        </form>
+                    </div>
                 </div>
-                <img class="img-fluid" src="assets/img/ipad.png" alt="..." />
             </div>
         </section>
-        <!-- Projects-->
-        <section class="projects-section bg-light" id="projects">
+        <!-- BlogPosts-->
+        <section class="blogPost-section bg-light" id="blogPost">
             <div class="container px-4 px-lg-5">
                 <!-- Featured Project Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg" alt="..." /></div>
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="/startbootstrap-grayscale/src/assets/img/bg-masthead.jpg" alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
                             <h4>Shoreline</h4>
@@ -200,7 +242,7 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="/startbootstrap-grayscale/dist/js/scripts.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
