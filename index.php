@@ -5,7 +5,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Mon blog php</title>
-        <link rel="icon" type="image/x-icon" href="/startbootstrap-grayscale/dist/assets/favicon.ico" />
+
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -16,8 +16,8 @@
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container px-4 px-lg-5">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-sm-5">
                 <a class="navbar-brand" href="#page-top">Accueil</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
@@ -54,10 +54,10 @@
                                 <img class="icone-me" src="/startbootstrap-grayscale/src/assets/img/monImage.jpg" alt="Logo/Photo de moi">
                                 <p>Marie EMMA</p>
                             </div>
-                            <div class="col-6">
+                            <div class="col-6 mt-5">
                                 <ul>
                                     <li>
-                                        <a href="" ><i class="fas fa-file-pdf"></i>&nbsp; Mon CV</a>
+                                        <a href="/startbootstrap-grayscale/src/assets/img/cv_marie_emma .docx (3).pdf" ><i class="fas fa-file-pdf"></i>&nbsp; Mon CV</a>
                                     </li>
                                     <li>
                                         <a href="https://github.com/MarieClaire974"><i class="fab fa-github"></i>&nbsp; Mon GitHub</a>
@@ -80,25 +80,29 @@
                     </div>
                     <div class="col-md-4 text-white-50">
                         <form action="#">
-                            <label for="name">
+                            <label for="name" class="form-label">
                                 Insérer votre nom:
                             </label>
-                            <input id="name" type="text" placeholder="ex: EMMA">
-                            <label for="firstName">
+                            <input id="name" type="text" placeholder="ex: EMMA" class="form-control" required>
+
+                            <label for="firstName" class="form-label">
                                 Insérer votre prénom
                             </label>
-                            <input id="firstName" type="text" placeholder="ex:Marie">
-                            <label for="email">
+                            <input id="firstName" type="text" placeholder="ex:Marie" class="form-control" required>
+
+                            <label for="email" class="form-label">
                                 Insérer votre adresse e-mail
                             </label>
-                            <input type="email" id="email" placeholder="ex: email@email.com">
-                            <label for="message">
+                            <input type="email" id="email" placeholder="ex: email@email.com" class="form-control" required>
+
+                            <label for="message" class="form-label">
                                 Insérer votre message
                             </label>
-                           <textarea name="message" id="message" cols="50" rows="10" placeholder="Votre message"></textarea>
+                           <textarea name="message" id="message" cols="60" rows="10" placeholder="Votre message" class="form-text"></textarea>
+
                            <div class="row ">
                                <div class="col text-center">
-                                   <input class="w-50" type="submit" value="Envoyer">
+                                   <input class="w-50 btn btn-light btn-sm mt-3" type="submit" value="Envoyer">
                                </div>
                            </div>
                         </form>
