@@ -1,4 +1,9 @@
+<?php
+include('include/cnx.php');
+include('./class/manager/UserManager.php')
+?>
 <html lang="fr">
+
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -25,7 +30,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">Me concernant</a></li>
                         <li class="nav-item"><a class="nav-link" href="#blogPost">BlogPost</a></li>
                         <li class="nav-item"><a class="nav-link" href="#signup">Se connecter</a></li>
                     </ul>
@@ -39,121 +44,18 @@
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase">Mon blog PHP</h1>
                         <h2 class="text-white-50 mx-auto mt-2 mb-5">Le développement informatique by Marie Emma</h2>
-                        <a class="btn btn-primary" href="#about">Get Started</a>
+                        <a class="btn btn-primary" href="#blogPost">Les Posts</a>
                     </div>
                 </div>
             </div>
         </header>
         <!-- About-->
         <section class="about-section" id="about">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-left">
-                    <div class="col-lg-6 text-light">
-                        <div class="row">
-                            <div class="col-4">
-                                <img class="icone-me" src="/startbootstrap-grayscale/src/assets/img/monImage.jpg" alt="Logo/Photo de moi">
-                                <p>Marie EMMA</p>
-                            </div>
-                            <div class="col-6 mt-5">
-                                <ul>
-                                    <li>
-                                        <a href="/startbootstrap-grayscale/src/assets/img/cv_marie_emma .docx (3).pdf" ><i class="fas fa-file-pdf"></i>&nbsp; Mon CV</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/MarieClaire974"><i class="fab fa-github"></i>&nbsp; Mon GitHub</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.linkedin.com/in/marie-claire-emma"><i class="fab fa-linkedin"></i>&nbsp; Mon LinkedIn</a>
-                                    </li>
-                                    <li>
-                                        <a href=""><i class="fab fa-twitter"></i>&nbsp; Mon Twitter</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h2 class="text-white mb-4">Mieux me connaitre</h2>
-                        <p class="text-white-50 ">
-                            Débutante ayant commencer en autodidacte, je suis actuellement en alternance PHP-Symfony.
-                            <br>
-                            En poste depuis 6 mois en tant que développeuse web chez Défi-Informatique.
-                        </p>
-                    </div>
-                    <div class="col-md-4 text-white-50">
-                        <form action="#">
-                            <label for="name" class="form-label">
-                                Insérer votre nom:
-                            </label>
-                            <input id="name" type="text" placeholder="ex: EMMA" class="form-control" required>
-
-                            <label for="firstName" class="form-label">
-                                Insérer votre prénom
-                            </label>
-                            <input id="firstName" type="text" placeholder="ex:Marie" class="form-control" required>
-
-                            <label for="email" class="form-label">
-                                Insérer votre adresse e-mail
-                            </label>
-                            <input type="email" id="email" placeholder="ex: email@email.com" class="form-control" required>
-
-                            <label for="message" class="form-label">
-                                Insérer votre message
-                            </label>
-                           <textarea name="message" id="message" cols="60" rows="10" placeholder="Votre message" class="form-text"></textarea>
-
-                           <div class="row ">
-                               <div class="col text-center">
-                                   <input class="w-50 btn btn-light btn-sm mt-3" type="submit" value="Envoyer">
-                               </div>
-                           </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            <?= include('aboutMe/aboutMe.php'); ?>
         </section>
         <!-- BlogPosts-->
-        <section class="blogPost-section bg-light" id="blogPost">
-            <div class="container px-4 px-lg-5">
-                <!-- Featured Project Row-->
-                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="/startbootstrap-grayscale/src/assets/img/bg-masthead.jpg" alt="..." /></div>
-                    <div class="col-xl-4 col-lg-5">
-                        <div class="featured-text text-center text-lg-left">
-                            <h4>Shoreline</h4>
-                            <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project One Row-->
-                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="..." /></div>
-                    <div class="col-lg-6">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">Misty</h4>
-                                    <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
-                                    <hr class="d-none d-lg-block mb-0 ms-0" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project Two Row-->
-                <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-02.jpg" alt="..." /></div>
-                    <div class="col-lg-6 order-lg-first">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white">Mountains</h4>
-                                    <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!</p>
-                                    <hr class="d-none d-lg-block mb-0 me-0" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <section class="projects-section bg-light" id="blogPost">
+            <?= include('blog/list_blog.php'); ?>
         </section>
         <!-- Signup-->
         <section class="signup-section" id="signup">
