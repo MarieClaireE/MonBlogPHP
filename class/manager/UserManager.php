@@ -1,12 +1,13 @@
 <?php
+include './include/cnx.php';
 
-include('./trait/Manager.php');
-
+include_once './trait/ManagerCnx.php';
 
 class UserManager
 {
-    use Manager;
-    public function createUser(User $user)
+    use ManagerCnx;
+
+    public function createUser(Users $user)
     {
         if (empty($user->getName()) || empty($user->getFirstname()) || (empty($user->getEmail()) || (empty($user->getMdp())))) {
             echo 'Pour s\'enregistrer il faut remplir tous les champs';
@@ -27,6 +28,29 @@ class UserManager
             } else {
                 echo '<p class="bg-warning text-center">Une erreur s\'est produite. Veuillez réessayer</p>';
             }
+        }
+    }
+    public function readAllUser()
+    {
+        $sql = 'SELECT * FROM user';
+        $req = $this->cnx->prepare($sql);
+        $req->execute();
+
+        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+            $user = new Users();
+            $user->setId($data['id']);
+            $user->setName($data['name']);
+            $user->setFirstname($data['firstname']);
+            $user->setEmail($data['email']);
+            $user->setMdp($data['mdp']);
+
+            $users[] = $user;
+        }
+        if (!empty($users)) {
+            return $users;
+        } else {
+            $message = 'Il n\'y a pas d\'internaute enregistré pour le moment';
+            return $message;
         }
     }
 }

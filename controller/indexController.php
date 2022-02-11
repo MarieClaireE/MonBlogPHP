@@ -1,9 +1,21 @@
 <?php
+require_once './class/manager/UserManager.php';
+require_once './class/entity/Users.php';
+require './include/cnx.php';
 
 class IndexController
 {
-    public function traitement()
+    public function message(Users $user)
     {
-        include('../aboutMe/aboutMe.php');
+        $manager = new UserManager($user);
+        $users = $manager->readAllUser();
+
+        $userTab = [];
+
+        foreach ($users as $user) {
+            $userTab[$user->getId()] = $user;
+        }
+
+        return $userTab;
     }
 }

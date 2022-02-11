@@ -1,3 +1,9 @@
+<?php
+spl_autoload_register(function ($class) {
+    include('./class/entity/'.$class.'.php');
+});
+?>
+
 <div class="container px-4 px-lg-5">
                 <!-- Featured Project Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 align-items-center">

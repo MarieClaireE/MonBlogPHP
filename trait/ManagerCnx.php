@@ -1,6 +1,6 @@
 <?php
 
-trait Manager
+trait ManagerCnx
 {
     private $cnx;
 
